@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>验证完整的表单</title>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js
+"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+<script src="js/ScanValidateWithJqueryValidate.js"></script>
+<script>
+    $().ready(function () {
+    scanValidate("#signupForm")
+});
+</script>
+</head>
+<body>
+<form class="cmxform" id="signupForm" method="get" action="">
+  <fieldset>
+    <legend>验证完整的表单</legend>
+    <p>
+      <label for="firstname">名字</label>
+      <input id="firstname" name="firstname" flag="need" type="text">
+    </p>
+    <p>
+      <label for="lastname">姓氏</label>
+      <input id="lastname" name="lastname" flag="need" type="text">
+    </p>
+    <p>
+      <label for="username">用户名</label>
+      <input id="username" name="username" flag="need" type="text">
+    </p>
+	  <p>
+      <label for="phone">手机</label>
+      <input id="phone" name="phone" flag="need,phone" type="number">
+    </p>
+    <p>
+      <label for="email">Email</label>
+      <input id="email" name="email" flag="need,email" type="text">
+    </p>
+	  <p>
+      <label for="url">URL</label>
+      <input id="url" name="url" flag="need,url" type="text">
+   </p>
+   <p>
+      <label for="ZipCode">邮编</label>
+      <input id="ZipCode" name="ZipCode" flag="need,ZipCode" type="text">
+   </p>
+  	<p>
+      <label for="ccomment">备注</label>
+	  <textarea id="ccomment" name="ccomment" flag="need"></textarea>
+    </p>
+    </fieldset>
+    <p>
+      <input class="submit" type="submit" value="提交">
+    </p>
+  </fieldset>
+</form>
+</body>
+</html>
